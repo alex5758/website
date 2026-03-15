@@ -60,3 +60,42 @@ width:200px;
   color: white;
   border-radius: 5px;
 }
+html {
+  scroll-behavior: smooth;
+}
+.card{
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.projects{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+.horizontal-nav{
+  background:white;
+  padding:12px 40px;
+  border-bottom:1px solid #ddd;
+  position:sticky; /* чтобы меню всегда сверху */
+  top:0;
+  z-index:1000;
+}
+
+.nav-brand{
+  font-weight:bold;
+  font-size:18px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:black;
+  font-weight:500;
+}
+
+.nav-links a:hover{
+  color:#0d6efd;
+}
