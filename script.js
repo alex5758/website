@@ -26,3 +26,34 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      sec.style.opacity = 1;
+      sec.style.transform = "translateY(0)";
+    } else {
+      sec.style.opacity = 0;
+      sec.style.transform = "translateY(50px)";
+    }
+  });
+});
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 130;
+    if(scrollY >= top){
+      current = sec.getAttribute('id');
+    }
+  });
+  links.forEach(link => {
+    link.classList.remove('active');
+    if(link.getAttribute('href') === '#' + current){
+      link.classList.add('active');
+    }
+  });
+});
