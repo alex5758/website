@@ -16,7 +16,7 @@ cards.forEach(card => {
   });
 });
 
-// Добавляем плавное появление карточек при скролле
+// Плавное появление карточек при скролле
 window.addEventListener('scroll', () => {
   cards.forEach(card => {
     const rect = card.getBoundingClientRect();
