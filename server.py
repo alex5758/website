@@ -5,4 +5,4 @@ PORT = int(os.environ.get("PORT", 8000))
 Handler = SimpleHTTPRequestHandler
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
 	print("Server running")
-	http.serve_forever()
+	httpd.serve_forever()
